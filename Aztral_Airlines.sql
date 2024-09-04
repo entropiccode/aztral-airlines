@@ -10,9 +10,9 @@ Initial re-release
 SET
 @ENTRY          := 190000,
 @NAME           := "Rumack", -- toon name, change if you like
-@SUBNAME        := "Aztral Airlines", -- if you don't want a sub name, rever to ""
+@SUBNAME        := "Enterprising Portal Mage", -- if you don't want a sub name, rever to ""
 @MODEL          := 21572,
-@BOXMONEY       := 0, -- you can set a cost option here, leave it 0 for no cose, example 10000 would be 1G
+@BOXMONEY       := 1000000, -- you can set a cost option here, leave it 0 for no cost, example 10000 would be 1G
 
 @AURA           := "30540", -- "35766" = casting
 
