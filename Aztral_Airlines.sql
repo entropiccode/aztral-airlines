@@ -30,8 +30,8 @@ SET
 -- Deleting code
 
 DELETE FROM creature_template WHERE entry = @ENTRY;
-DELETE FROM creature_template_model WHERE CreatureID = @ENTRY
-DELETE FROM creature_template_addon WHERE Entry = @ENTRY ;
+DELETE FROM creature_template_model WHERE CreatureID = @ENTRY;
+DELETE FROM creature_template_addon WHERE Entry = @ENTRY;
 DELETE FROM gossip_menu WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+8;
 DELETE FROM npc_text WHERE ID BETWEEN @TEXT_ID AND @TEXT_ID+4;
 DELETE FROM gossip_menu_option WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+8;
