@@ -24,6 +24,7 @@ SET
 -- Deleting code
 
 DELETE FROM creature_template WHERE entry = @ENTRY;
+DELETE FROM creature_template_model WHERE CreatureID = @ENTRY
 DELETE FROM creature_template_addon WHERE Entry = @ENTRY ;
 DELETE FROM gossip_menu WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+8;
 DELETE FROM npc_text WHERE ID BETWEEN @TEXT_ID AND @TEXT_ID+4;
@@ -35,8 +36,14 @@ DELETE from gameobject WHERE ID = @RUNE AND guid >= 200000;
 
 -- Teleporter
 
-INSERT INTO creature_template (entry, modelid1, `name`, subname, IconName, gossip_menu_id, minlevel, maxlevel, faction, npcflag, speed_walk, speed_run, scale, `rank`, unit_class, unit_flags, `type`, type_flags, RegenHealth, flags_extra, AiName) VALUES
-(@ENTRY, @MODEL, @NAME, @SUBNAME, "Directions", @GOSSIP_MENU, 71, 71, 35, 3, 1, 1.14286, 1.25, 1, 1, 2, 7, 138936390, 1, 2, "SmartAI");
+-- INSERT INTO creature_template (entry, modelid1, `name`, subname , IconName    , gossip_menu_id, minlevel, maxlevel, faction, npcflag, speed_walk, speed_run, scale, `rank`, unit_class, unit_flags, `type`, type_flags, RegenHealth, flags_extra, AiName) VALUES
+-- (@ENTRY, @MODEL, @NAME, @SUBNAME, "Directions", @GOSSIP_MENU, 71, 71, 35, 3, 1, 1.14286, 1.25, 1, 1, 2, 7, 138936390, 1, 2, "SmartAI");
+
+INSERT INTO creature_template (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction`, `npcflag`, `scale`, `rank`, `dmgschool`, `baseattacktime`, `rangeattacktime`, `unit_class`, `unit_flags`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `AIName`, `MovementType`, `HoverHeight`, `RacialLeader`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES
+(@ENTRY, @NAME, @SUBNAME, "Directions", @GOSSIP_MENU, 60, 60, 2, 35, 3, 1, 1.25, 1, 0, 2000, 0, 8, 2, 7, 138936390, 0, 0, 0, "SmartAI", 0, 1, 0, 0, 1, 0, 2, '')
+
+INSERT INTO creature_template_model (`CreatureID`, `Idx`, `CreatureDisplayID`, `DisplayScale`, `Probability`, `VerifiedBuild`) VALUES
+(@ENTRY, 0, @MODEL, 1, 1, 0);
 
 -- Teleporter aura
 
