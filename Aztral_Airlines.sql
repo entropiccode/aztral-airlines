@@ -46,7 +46,7 @@ DELETE from gameobject WHERE ID = @RUNE AND guid >= 200000;
 -- (@ENTRY, @MODEL, @NAME, @SUBNAME, "Directions", @GOSSIP_MENU, 71, 71, 35, 3, 1, 1.14286, 1.25, 1, 1, 2, 7, 138936390, 1, 2, "SmartAI");
 
 INSERT INTO creature_template (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction`, `npcflag`, `scale`, `rank`, `dmgschool`, `baseattacktime`, `rangeattacktime`, `unit_class`, `unit_flags`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `AIName`, `MovementType`, `HoverHeight`, `RacialLeader`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES
-(@ENTRY, @NAME, @SUBNAME, "Directions", @GOSSIP_MENU, 60, 60, 2, 35, 3, 1, 1.25, 1, 0, 2000, 0, 8, 2, 7, 138936390, 0, 0, 0, "SmartAI", 0, 1, 0, 0, 1, 0, 2, '')
+(@ENTRY, @NAME, @SUBNAME, "Directions", @GOSSIP_MENU, 60, 60, 2, 35, 3, 1, 1.25, 1, 0, 2000, 0, 8, 2, 7, 138936390, 0, 0, 0, "SmartAI", 0, 1, 0, 0, 1, 0, 2, '');
 
 INSERT INTO creature_template_model (`CreatureID`, `Idx`, `CreatureDisplayID`, `DisplayScale`, `Probability`, `VerifiedBuild`) VALUES
 (@ENTRY, 0, @MODEL, 1, 1, 0);
