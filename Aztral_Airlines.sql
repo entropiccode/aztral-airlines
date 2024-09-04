@@ -17,7 +17,7 @@ SET
 @AURA           := "30540", -- "35766" = casting
 
 @TEXT_ID        := 300000,
-@GOSSIP_MENU    := 50000,
+@GOSSIP_MENU    := 77000,
 
 @RUNE           := 194394;
 
